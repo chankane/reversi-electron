@@ -1,0 +1,23 @@
+{
+  "name": "reversi-electron",
+  "version": "1.0.0",
+  "description": "Reversi in Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "hoge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chankane/reversi-electron.git"
+  },
+  "author": "kane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chankane/reversi-electron/issues"
+  },
+  "homepage": "https://github.com/chankane/reversi-electron#readme",
+  "devDependencies": {
+    "electron": "^16.0.7"
+  }
+}

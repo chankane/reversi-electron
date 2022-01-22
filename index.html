@@ -1,0 +1,33 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Reversi</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <table id="board" border="1">
+      <tr>
+        <td></div></td>
+        <td></div></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <div id="right-side-container">
+      <input type="button"  value="New Game" id="btn-newgame">
+      <h1 id="score-black">Black: 00</h1>
+      <h1 id="score-white">White: 00</h1>
+      <textarea name="notation" id="notation" cols="16" rows="16"></textarea>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
