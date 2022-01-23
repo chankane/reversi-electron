@@ -11,6 +11,9 @@ function p(s) {
 function apply(board_state) {
   board = document.querySelectorAll('#board tr td')
   for (let i = 0; i < board.length; i++) {
+    board[i].innerHTML = ''
+  }
+  for (let i = 0; i < board.length; i++) {
     let disc = document.createElement('div')
     switch (board_state[i]) {
       case 'B':
