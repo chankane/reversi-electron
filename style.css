@@ -11,14 +11,16 @@ body {
 #board {
   width: 95vh;
   height: 95vh;
-  border: 10px solid #200;
-  border-collapse:collapse;
+  table-layout: fixed;
+  border: 15px solid #200;
+  /* border-collapse:collapse; */
+  border-spacing: 0;
   background-color: #040;
 }
 
 /* cell of board */
 #board tr td {
-  border: solid #222;
+  border: 1px solid #222;
 }
 
 .disc {
@@ -35,8 +37,6 @@ body {
 .white {
   background-color: #C5C5C5;
 }
-
-
 
 #right-side-container {
   display: flex;

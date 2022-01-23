@@ -1,8 +1,10 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
+const child = require('child_process').execFile;
+const model = require('./model')
 
 const createWindow = () => {
   // Create the browser window.
@@ -11,6 +13,8 @@ const createWindow = () => {
     height: 600,
     resizable: false,
     webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
@@ -24,6 +28,20 @@ const createWindow = () => {
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
+
+ipcMain.on('init', (event, arg) => {
+  console.log(arg)
+  event.reply('init-reply', model.init())
+
+  // let  executablePath = ".\\main.exe";
+  // let parameters = [arg];
+
+  // child(executablePath, parameters, function(err, data) {
+  //   console.log(err)
+  //   console.log(data.toString());
+  //   event.reply('init-reply', data.toString())
+  // });
+})
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
