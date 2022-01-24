@@ -8,14 +8,23 @@ body {
   align-items: center;
 }
 
-#board {
-  width: 95vh;
-  height: 95vh;
+#board, #score {
   table-layout: fixed;
-  border: 15px solid #200;
   /* border-collapse:collapse; */
   border-spacing: 0;
   background-color: #040;
+}
+
+#board {
+  width: 95vh;
+  height: 95vh;
+  border: 15px solid #200;
+}
+
+#score {
+  width: 200px;
+  height: 62px; /* why 50px does not work correctly??? */
+  border: 8px solid #200;
 }
 
 /* cell of board */
@@ -47,15 +56,18 @@ body {
 #btn-newgame {
   height: 50px;
   font-size: x-large;
+  margin: 5% 0;
   background-color: #BBBBB5;
 }
 
 #score-black {
-  margin: 10px auto 0;
+  margin: 0;
+  text-align: center;
 }
 
 #score-white {
-  margin: 0 auto 10px;
+  margin: 0;
+  text-align: center;
 }
 
 #notation {

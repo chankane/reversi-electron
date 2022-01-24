@@ -99,8 +99,15 @@
         <input type="radio" name="turn" value="white">White
       </div>
       <input type="button"  value="New Game" id="btn-newgame">
-      <h1 id="score-black">Black: 00</h1>
-      <h1 id="score-white">White: 00</h1>
+      <table id="score">
+        <tr>
+          <td><div class="disc black"></div></td>
+          <td><h1 id="score-black">0</h1></td>
+          <td><div class="disc white"></div></td>
+          <td><h1 id="score-white">0</h1></td>
+        </tr>
+        <div class="disc"></div>
+      </table>
       <textarea name="notation" id="notation" cols="16" rows="16"></textarea>
     </div>
     <!-- You can also require other files to run in this process -->
